@@ -1,0 +1,9 @@
+target_y = 680;
+rest_y = 720;
+hovering = false;
+clicked = false;
+hover_snd = false;
+scale = 0.8;
+target_scale = 1;
+hover_offset = 0;
+target_hover_offset = 0;

@@ -1,0 +1,1 @@
+draw_sprite_ext(sprite_index, image_index, x, y + hover_offset, scale, scale, 0, c_white, image_alpha);
