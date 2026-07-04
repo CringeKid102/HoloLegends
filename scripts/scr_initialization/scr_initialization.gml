@@ -4,6 +4,7 @@ function scr_initialization() {
     global.sfx_vol = 0.8;
     global.language = 0;
     global.current_music = noone;
+    global.save_file_name = "save1.ini";
     
     // Try to load existing settings
     if (file_exists("settings.ini")) {

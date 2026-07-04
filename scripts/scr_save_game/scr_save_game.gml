@@ -1,7 +1,19 @@
-ini_open(save_file_name);
+if (!variable_global_exists("save_file_name")) {
+	global.save_file_name = "save1.ini";
+}
 
-ini_write_real("Character", "Index", ds_stats[| e_character_stats.character]);
-ini_write_real("Character", "Level", ds_stats[| e_character_stats.level]);
+if (!variable_global_exists("ds_stats") || !ds_exists(global.ds_stats, ds_type_list)) {
+	global.ds_stats = ds_list_create();
+}
+
+var stat_character = 0;
+var stat_level = 1;
+var stats = global.ds_stats;
+
+ini_open(global.save_file_name);
+
+ini_write_real("Character", "Index", stats[| stat_character]);
+ini_write_real("Character", "Level", stats[| stat_level]);
 
 ini_close();
 
