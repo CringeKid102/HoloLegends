@@ -54,6 +54,7 @@
     {"id":{"name":"obj_examplechar","path":"objects/obj_examplechar/obj_examplechar.yy",},},
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"obj_save_slot","path":"objects/obj_save_slot/obj_save_slot.yy",},},
     {"id":{"name":"obj_setting","path":"objects/obj_setting/obj_setting.yy",},},
     {"id":{"name":"obj_textbox","path":"objects/obj_textbox/obj_textbox.yy",},},
     {"id":{"name":"obj_textevent","path":"objects/obj_textevent/obj_textevent.yy",},},
