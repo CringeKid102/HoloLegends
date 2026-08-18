@@ -16,5 +16,3 @@ ini_write_real("Character", "Index", stats[| stat_character]);
 ini_write_real("Character", "Level", stats[| stat_level]);
 
 ini_close();
-
-show_message("Game Saved");
