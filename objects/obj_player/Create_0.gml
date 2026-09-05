@@ -1,7 +1,17 @@
 spd = 2;
 
 //--------Dialogue Stuff
-reset_dialogue_defaults();
+// Initialize dialogue variables
+myText = -1;
+mySpeaker = -1;
+myEffects = -1;
+myTextSpeed = -1;
+myTypes = 0;
+myNextLine = -1;
+myScripts = -1;
+myTextCol = -1;
+myEmotion = -1;
+myEmote = -1;
 myPortrait			= spr_portrait_player;
 myVoice				= snd_voice2;
 myFont				= fnt_dialogue;

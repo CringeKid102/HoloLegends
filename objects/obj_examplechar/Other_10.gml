@@ -1,5 +1,15 @@
 //---You can update variables here!---//
-reset_dialogue_defaults();
+// Initialize dialogue variables
+myText = -1;
+mySpeaker = -1;
+myEffects = -1;
+myTextSpeed = -1;
+myTypes = 0;
+myNextLine = -1;
+myScripts = -1;
+myTextCol = -1;
+myEmotion = -1;
+myEmote = -1;
 
 
 switch(choice_variable){

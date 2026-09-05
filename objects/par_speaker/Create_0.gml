@@ -17,4 +17,14 @@ myPortraitIdle_x	= -1;
 myPortraitIdle_y	= -1;
 
 //-----------Defaults Setup (LEAVE THIS STUFF)
-reset_dialogue_defaults();
+// Initialize dialogue variables
+myText = -1;
+mySpeaker = -1;
+myEffects = -1;
+myTextSpeed = -1;
+myTypes = 0;
+myNextLine = -1;
+myScripts = -1;
+myTextCol = -1;
+myEmotion = -1;
+myEmote = -1;

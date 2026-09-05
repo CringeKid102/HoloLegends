@@ -35,6 +35,13 @@ if(type[page] == 0){
 	text_NE = text[page]; 
 	str_len = string_length(text_NE);
 	
+	// Validate text exists
+	if (str_len <= 0) {
+		text_effects = -1;
+		breakpoints = -1;
+		exit;
+	}
+	
 	//Get variables ready
 	var by = 0, ty = 0, cc = 1, breakpoint = 0;
 	var next_space = 0, char, txtwidth = boxWidth-(2*x_buffer), char_max = txtwidth div charSize;

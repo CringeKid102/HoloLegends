@@ -14,8 +14,7 @@ create_textevent(
 	-1,
 	[ [1,c_lime, 9,c_fuchsia, 16,c_aqua] ],
 	-1,
-	-1,
-	
+	-1
 );
 
 show_debug_overlay(true);

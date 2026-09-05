@@ -9,4 +9,14 @@ myName			= "None";
 
 //-----------Setup (LEAVE THIS STUFF)
 myTextbox   = noone;
-reset_dialogue_defaults();
+// Initialize dialogue variables
+myText = -1;
+mySpeaker = -1;
+myEffects = -1;
+myTextSpeed = -1;
+myTypes = 0;
+myNextLine = -1;
+myScripts = -1;
+myTextCol_array = -1;
+myEmotion = -1;
+myEmote = -1;
