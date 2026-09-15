@@ -6,7 +6,7 @@ detection_radius = 32;
 
 myVoice			= snd_voice1;
 myPortrait		= -1;
-myFont			= fnt_dialogue;
+myFont			= fnt_main;
 myName			= "None";
 
 myPortraitTalk		= -1;

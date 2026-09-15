@@ -5,7 +5,7 @@ debug = false;
 create_textevent(
 	["Welcome to the demo of the dialogue system! Hit 'E' to go to the next page.", 
 	"This is an example of a one-time 'text event'. It runs when the game starts.", 
-	"Hit 'Space' to make a player monologue happen. And 'D' to toggle debug."],
+	"Hit 'Space' to make a player monologue happen. And 'F3' to toggle debug."],
 	-1,
 	[ [1,1, 9,2, 16,4], -1, [1,3]],
 	[ [1,0.2, 4,2, 10, 0.5]],

@@ -1,4 +1,7 @@
-/// @description Draw settings menu with all options
+/// @description Kept empty so settings are rendered only by Draw_0.
+exit;
+
+/*
 draw_set_color(c_white);
 draw_set_alpha(1);
 draw_set_font(fnt_main);
@@ -95,3 +98,4 @@ if (save_message_visible) {
 
 draw_set_color(c_white);
 draw_set_alpha(1);
+*/

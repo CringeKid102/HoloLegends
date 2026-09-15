@@ -14,7 +14,7 @@ myEmotion = -1;
 myEmote = -1;
 myPortrait			= spr_portrait_player;
 myVoice				= snd_voice2;
-myFont				= fnt_dialogue;
+myFont				= fnt_main;
 myName				= "Green";
 
 myPortraitTalk		= spr_portrait_examplechar_mouth;

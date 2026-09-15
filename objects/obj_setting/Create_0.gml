@@ -13,6 +13,7 @@ button_width = 100;
 button_height = 50;
 
 slider_grabbed = -1;
+clicked = false;
 save_message_visible = false;
 save_message_timer = 0;
 save_message_duration = 90;
