@@ -56,7 +56,7 @@ if (mouse_check_button_pressed(mb_left)) {
     }
     // Save button
     else if (point_in_rectangle(_mx, _my, menu_x, menu_y, menu_x + button_width, menu_y + button_height)) {
-        save_settings();
+        save_settings(id);
         play_sfx(snd_button_press);
     }
     // Exit button

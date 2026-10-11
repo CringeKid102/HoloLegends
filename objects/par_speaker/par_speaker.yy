@@ -12,7 +12,10 @@
     "name":"FC_DialogueSystem",
     "path":"folders/Objects/FC_DialogueSystem.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"par_world_solid",
+    "path":"objects/par_world_solid/par_world_solid.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

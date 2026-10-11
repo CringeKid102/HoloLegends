@@ -1,8 +1,4 @@
-keybinds = ds_map_create();
-ds_map_add(keybinds, "move_left", ord("A"));
-ds_map_add(keybinds, "move_right", ord("D"));
-ds_map_add(keybinds, "move_up", ord("W"));
-ds_map_add(keybinds, "move_down", ord("S"));
+keybinds = global.keybinds;
 
 menu_x = 50;
 menu_y = 340;

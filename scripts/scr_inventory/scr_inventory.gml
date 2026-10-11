@@ -15,16 +15,15 @@ function add_item(item_id, quantity = 1) {
 		init_inventory();
 	}
 	
-	// Check if inventory is full
-	if (global.inventory_item_count >= global.inventory_max_size) {
-		show_debug_message("Inventory full!");
-		return false;
-	}
-	
 	if (ds_map_exists(global.inventory, item_id)) {
 		// Item already exists, just increase quantity
 		global.inventory[? item_id] += quantity;
 	} else {
+		// Check capacity only when adding a new inventory slot.
+		if (global.inventory_item_count >= global.inventory_max_size) {
+			show_debug_message("Inventory full!");
+			return false;
+		}
 		// Add new item
 		global.inventory[? item_id] = quantity;
 		global.inventory_item_count += 1;

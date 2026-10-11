@@ -20,10 +20,14 @@ draw_set_alpha(1); draw_set_color(c_white);
 
 // Sliders
 draw_text(menu_x, 110, global.language == 0 ? "Music Volume" : "音楽音量");
-global.music_vol = draw_slider(menu_x + 400, 130, slider_width, global.music_vol, 0, "Music Volume");
+var music_slider_result = draw_slider(menu_x + 400, 130, slider_width, global.music_vol, 0, "Music Volume", slider_grabbed);
+global.music_vol = music_slider_result[0];
+slider_grabbed = music_slider_result[1];
 
 draw_text(menu_x, 150, global.language == 0 ? "SFX Volume" : "効果音音量");
-global.sfx_vol = draw_slider(menu_x + 400, 170, slider_width, global.sfx_vol, 1, "SFX Volume");
+var sfx_slider_result = draw_slider(menu_x + 400, 170, slider_width, global.sfx_vol, 1, "SFX Volume", slider_grabbed);
+global.sfx_vol = sfx_slider_result[0];
+slider_grabbed = sfx_slider_result[1];
 
 // Save / Exit
 draw_btn(menu_x, menu_y, button_width, button_height, global.language == 0 ? "Save" : "保存", mouse_x, mouse_y);

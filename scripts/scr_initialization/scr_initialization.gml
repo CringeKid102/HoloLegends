@@ -6,7 +6,18 @@ function scr_initialization() {
     if (!variable_global_exists("current_music")) {
         global.current_music = noone;
     }
-    global.save_file_name = "save1.ini";
+    if (!variable_global_exists("save_file_name")) {
+        global.save_file_name = "save1.ini";
+    }
+
+    if (!variable_global_exists("keybinds") || !ds_exists(global.keybinds, ds_type_map)) {
+        global.keybinds = ds_map_create();
+    }
+    ds_map_clear(global.keybinds);
+    global.keybinds[? "move_left"] = ord("A");
+    global.keybinds[? "move_right"] = ord("D");
+    global.keybinds[? "move_up"] = ord("W");
+    global.keybinds[? "move_down"] = ord("S");
     
     // Initialize playtime system
     if (!variable_global_exists("playtime")) {
@@ -34,9 +45,9 @@ function scr_initialization() {
     }
     
     // Game settings
-    global.text_speed = 1.0;
-    global.difficulty = 1;
-    global.auto_save_enabled = true;
+    if (!variable_global_exists("text_speed")) global.text_speed = 1.0;
+    if (!variable_global_exists("difficulty")) global.difficulty = 1;
+    if (!variable_global_exists("auto_save_enabled")) global.auto_save_enabled = true;
     
     // Try to load existing settings
     if (file_exists("settings.ini")) {
@@ -47,6 +58,10 @@ function scr_initialization() {
             global.language = clamp(ini_read_real("General", "Language", 0), 0, 1);
             global.text_speed = clamp(ini_read_real("General", "TextSpeed", 1.0), 0.5, 2.0);
             global.difficulty = clamp(ini_read_real("General", "Difficulty", 1), 0, 2);
+            global.keybinds[? "move_left"] = ini_read_real("Keybinds", "move_left", global.keybinds[? "move_left"]);
+            global.keybinds[? "move_right"] = ini_read_real("Keybinds", "move_right", global.keybinds[? "move_right"]);
+            global.keybinds[? "move_up"] = ini_read_real("Keybinds", "move_up", global.keybinds[? "move_up"]);
+            global.keybinds[? "move_down"] = ini_read_real("Keybinds", "move_down", global.keybinds[? "move_down"]);
             ini_close();
         } catch (e) {
             show_debug_message("Failed to load settings: " + string(e));

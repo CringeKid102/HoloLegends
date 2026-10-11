@@ -71,13 +71,12 @@ if(type[page] == 0){
 #region Get the emotes
 if(emotes != -1 and emotes[page] != -1){
 	var sp = speaker[page]; var ep = emotes[page];
-	var obj = instance_create_layer(sp.x,sp.y-sp.sprite_height-2,"Text",obj_emote);
-	var spr = emote_sprite;
-	with(obj){
-		sprite_index = spr;
-		image_index = ep;
-		creator = sp;
-		mode = 1;
+	if (instance_exists(sp)) {
+		var emote_instance = instance_create_layer(sp.x,sp.y-sp.sprite_height-2,"Instances",obj_emote);
+		variable_instance_set(emote_instance, "sprite_index", emote_sprite);
+		variable_instance_set(emote_instance, "image_index", ep);
+		variable_instance_set(emote_instance, "creator", sp);
+		variable_instance_set(emote_instance, "mode", 1);
 	}
 }
 #endregion

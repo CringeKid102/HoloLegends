@@ -1,4 +1,4 @@
-function draw_slider(x, y, width, value, slider_index, label) {
+function draw_slider(x, y, width, value, slider_index, label, grabbed_slider) {
     var _mx = mouse_x;
     var _my = mouse_y;
     
@@ -9,11 +9,12 @@ function draw_slider(x, y, width, value, slider_index, label) {
     var hit_y2 = y + 20;
     
     var is_hovered = point_in_rectangle(_mx, _my, hit_x1, hit_y1, hit_x2, hit_y2);
-    var is_active = (slider_grabbed == slider_index);
+    var is_active = (grabbed_slider == slider_index);
     
     // Handle interaction
     if (mouse_check_button_pressed(mb_left) && is_hovered) {
-        slider_grabbed = slider_index;
+        grabbed_slider = slider_index;
+        is_active = true;
     }
     
     // Update value if active
@@ -47,5 +48,5 @@ function draw_slider(x, y, width, value, slider_index, label) {
     draw_text(x + width + 70, y - 10, string(floor(value * 100)) + "%");
     draw_set_halign(fa_left);
     
-    return value;
+    return [value, grabbed_slider];
 }
